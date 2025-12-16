@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar Pizza - Pizzeria El Primo</title>
+    <link rel="stylesheet" href="css/estilosC.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="panel-izquierdo">
+            <a href="index.html" class="btn-volver">← Volver al Menú</a>
+            
+            <h1>🍕 ¡Ordena tu Pizza!</h1>
+
+
+            <div class="cliente-section">
+                <h2>👤 Datos del Cliente</h2>
+                <div class="form-grupo">
+                    <label for="nombre-cliente">Nombre:</label>
+                    <input type="text" id="nombre-cliente" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="form-grupo">
+                    <label for="telefono-cliente">Teléfono:</label>
+                    <input type="tel" id="telefono-cliente" placeholder="10 dígitos" maxlength="10" pattern="[0-9]{10}" inputmode="numeric">
+                </div>
+            </div>
+
+
+            <div class="menu-section">
+                <h2>🍕 Nuestro Menú</h2>
+                <div class="descuento-banner">
+                    <p>🎉 <strong>¡Promoción!</strong> En pizzas GRANDES:</p>
+                    <ul>
+                        <li>2 pizzas grandes → <span class="descuento-porcentaje">8% OFF</span></li>
+                        <li>3+ pizzas grandes → <span class="descuento-porcentaje">15% OFF</span></li>
+                    </ul>
+                </div>
+                <div id="menu-pizzas" class="menu-pizzas">
+                    <div class="cargando">
+                        <p>🔄 Cargando menú...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-derecho">
+            <div class="ticket">
+                <div class="ticket-header">
+                    <h2>🧾 Tu Pedido</h2>
+                    <p class="ticket-subtitle">Pizzeria El Primo</p>
+                </div>
+
+                <div id="ticket-items" class="ticket-items">
+                    <p class="carrito-vacio">🛒 El carrito está vacío</p>
+                </div>
+
+                <div class="ticket-totales">
+                    <div class="linea-total">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="linea-descuento">
+                        <span id="descuento-info">Sin descuento</span>
+                        <span id="descuento-monto">-$0.00</span>
+                    </div>
+                    <div class="linea-total total-final">
+                        <span>TOTAL:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                </div>
+
+                <button class="btn-confirmar" onclick="confirmarPedido()">
+                    ✅ Confirmar Pedido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/cliente.js"></script>
+</body>
+</html>

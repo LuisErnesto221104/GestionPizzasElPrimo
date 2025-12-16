@@ -1,0 +1,37 @@
+{
+  "pizzas": [
+    {
+      "id": "1",
+      "nombre": "Pepperoni",
+      "descripcion": "Deliciosa pizza con abundante pepperoni y queso mozzarella",
+      "precios": {
+        "chica": 89,
+        "mediana": 129,
+        "grande": 169,
+        "extragrande": 209
+      }
+    },
+    {
+      "nombre": "Hawaiana",
+      "descripcion": "Pizza con jamón, piña y queso mozzarella",
+      "precios": {
+        "chica": 99,
+        "mediana": 139,
+        "grande": 179,
+        "extragrande": 219.01
+      },
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "nombre": "Vegetariana",
+      "descripcion": "Pizza con una variedad de vegetales frescos y queso mozzarella",
+      "precios": {
+        "chica": 95,
+        "mediana": 135,
+        "grande": 175,
+        "extragrande": 215
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - Pizzeria El Primo</title>
+    <link rel="stylesheet" href="css/estilosP.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="btn-volver">← Volver al Menú</a>
+        
+        <h1>📋 Gestión de Pedidos</h1>
+
+        <div class="estadisticas">
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-info">
+                    <span class="stat-valor" id="total-ventas">$0.00</span>
+                    <span class="stat-label">Ventas Totales</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📦</div>
+                <div class="stat-info">
+                    <span class="stat-valor" id="total-pedidos">0</span>
+                    <span class="stat-label">Total Pedidos</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <div class="stat-info">
+                    <span class="stat-valor" id="pedidos-pendientes">0</span>
+                    <span class="stat-label">Pendientes</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pedidos-section">
+            <h2>🍕 Pedidos Recientes</h2>
+            <div id="lista-pedidos" class="lista-pedidos">
+                <div class="cargando">
+                    <p>🔄 Cargando pedidos...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/pedidos.js"></script>
+</body>
+</html>

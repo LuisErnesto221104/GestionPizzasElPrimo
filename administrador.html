@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Pizzería El primo</title>
+    <link rel="stylesheet" href="css/estilosA.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="btn-volver">← Volver al Menú</a>
+        
+        <h1>🍕 Administración de Pizzas</h1>
+
+
+        <div id="mensaje" class="mensaje" style="display: none;"></div>
+        
+        <form id="form-pizza" class="form-pizza">
+            <h2>📝 Nueva Pizza</h2>
+            
+            <div class="form-row">
+                <div class="form-section">
+                    <label for="nombre">Nombre de la Pizza:</label>
+                    <input type="text" id="nombre" placeholder="Ej: Pepperoni Especial" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" placeholder="Describe los ingredientes y características de la pizza" required></textarea>
+            </div>
+
+            <h3>💰 Precios por Tamaño</h3>
+            <div class="precios-grid">
+                <div class="precio-item">
+                    <label for="precio-chica">Chica</label>
+                    <div class="input-precio">
+                        <span>$</span>
+                        <input type="number" id="precio-chica" placeholder="0.00" step="0.01" min="0" required>
+                    </div>
+                </div>
+                <div class="precio-item">
+                    <label for="precio-mediana">Mediana</label>
+                    <div class="input-precio">
+                        <span>$</span>
+                        <input type="number" id="precio-mediana" placeholder="0.00" step="0.01" min="0" required>
+                    </div>
+                </div>
+                <div class="precio-item">
+                    <label for="precio-grande">Grande</label>
+                    <div class="input-precio">
+                        <span>$</span>
+                        <input type="number" id="precio-grande" placeholder="0.00" step="0.01" min="0" required>
+                    </div>
+                </div>
+                <div class="precio-item">
+                    <label for="precio-extragrande">Extra Grande</label>
+                    <div class="input-precio">
+                        <span>$</span>
+                        <input type="number" id="precio-extragrande" placeholder="0.00" step="0.01" min="0" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" id="btn-guardar" class="btn-guardar">🍕 Guardar Pizza</button>
+                <button type="button" id="btn-cancelar" class="btn-cancelar" onclick="cancelarEdicion()" style="display: none;">✖ Cancelar</button>
+            </div>
+        </form>
+
+        <div class="tabla-section">
+            <h2>📋 Pizzas Registradas</h2>
+            <div class="tabla-container">
+                <table id="tabla-pizzas">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Chica</th>
+                            <th>Mediana</th>
+                            <th>Grande</th>
+                            <th>Extra Grande</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-pizzas-body">
+                        <tr>
+                            <td colspan="7" class="cargando">Cargando pizzas...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/administrador.js"></script>
+</body>
+</html>
